@@ -2,12 +2,12 @@
 
 ## Table of Content
 
-* Case Study
-* Dataset Description
-* ER Diagram
-* Data Cleaning
-* Data Analysis
-* Dashboard
+* [Case Study](#case-study)
+* [Dataset Description](#dataset-description)
+* [ER Diagram](#er-diagram)
+* [Data Cleaning](#data-cleaning)
+* [Data Analysis](#data-analysis)
+* [Dashboard](#dashboard)
 
 ---
 

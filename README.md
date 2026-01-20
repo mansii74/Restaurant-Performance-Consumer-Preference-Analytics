@@ -13,17 +13,17 @@
 
 ## Case Study
 
-This project analyzes restaurant ratings in Mexico using feedback from real consumers. It combines customer demographics, dining preferences, restaurant attributes, and service quality to understand factors influencing customer satisfaction and overall restaurant performance.
+This project analyzes restaurant performance and consumer dining preferences using real customer rating data from Mexico. The objective is to understand how customer demographics, restaurant attributes, and service quality influence overall customer satisfaction and restaurant performance.
 
 ---
 
 ## Dataset Description
 
-The dataset consists of multiple relational tables:
+The dataset consists of multiple relational tables capturing consumers, restaurants, cuisines, and ratings.
 
 ### Consumers
 
-* Consumer_ID – Unique consumer identifier
+* Consumer_ID – Unique identifier for each consumer
 * City, State, Country
 * Latitude, Longitude
 * Smoker
@@ -71,26 +71,24 @@ The dataset consists of multiple relational tables:
 
 ## ER Diagram
 
-The ER diagram illustrates relationships between consumers, restaurants, ratings, and cuisines using unique identifiers to enable structured analysis.
+The ER diagram below illustrates the relationships between consumers, restaurants, ratings, and cuisines.
+
+![ER Diagram](images/ER_diagram.png)
 
 ---
 
 ## Data Cleaning
 
-### Data Import Steps
-
-* Load datasets using folder-based ingestion
-* Expand and transform files
-* Remove duplicates and handle missing values
-* Validate table relationships
+* Imported datasets using folder-based ingestion
+* Expanded and transformed files in Power BI
+* Removed duplicates and handled missing values
+* Standardized categorical values
+* Validated relationships between tables
 
 ### Calculated Fields
 
-**Age Group**
-Children & Adolescents | Young Adults | Adults | Middle-aged Adults | Seniors
-
-**Rating Categories**
-Unsatisfactory | Satisfactory | Highly Satisfactory
+* Age Groups (Children, Young Adults, Adults, Middle-aged, Seniors)
+* Food, Service, and Overall Rating Categories
 
 ---
 
@@ -99,49 +97,56 @@ Unsatisfactory | Satisfactory | Highly Satisfactory
 ### Local Insights
 
 * Majority of consumers belong to San Luis Potosí
-* Young adults form the largest demographic group
+* Young adults form the largest age group across states
 * Most consumers are non-smokers
 * Limited parking availability across restaurants
 
 ### Dining Insights
 
-* High-priced restaurants are more likely to offer parking
-* San Luis Potosí has the highest restaurant count
+* High-priced restaurants are more likely to provide parking
+* San Luis Potosí has the highest number of restaurants
 * Franchise and non-franchise restaurants show similar rating patterns
-* Mexican cuisine is the most preferred
+* Mexican cuisine is the most preferred cuisine
 
 ### Hospitality Insights
 
 * Most restaurants do not serve alcohol
 * Public transport is the most common travel mode
-* Alcohol service shows moderate influence on ratings
+* Alcohol availability has moderate impact on ratings
 * Majority of restaurants follow smoke-free policies
 
 ### Behavior Insights
 
 * Students form the majority of consumers
-* Drinking habits vary across states
+* Drinking habits vary across regions
 * Budget levels are mostly low to medium
-
-### Review Insights
-
-* Food quality and service strongly impact overall ratings
-* Certain restaurants consistently receive higher satisfaction scores
 
 ---
 
 ## Dashboard
 
-The dashboard presents interactive insights on:
+### Consumer Demographics Overview
 
-* Consumer demographics
-* Restaurant distribution by state
-* Cuisine preferences
-* Food, service, and overall ratings
-* Restaurant performance comparison
+![Dashboard](images/d1.jpg)
+
+### Restaurant Distribution & Pricing
+
+![Dashboard](images/d2.jpg)
+
+### Cuisine Preference Analysis
+
+![Dashboard](images/d3.jpg)
+
+### Food & Service Rating Analysis
+
+![Dashboard](images/d4.jpg)
+
+### Overall Restaurant Performance
+
+![Dashboard](images/d5.jpg)
 
 ---
 
 ## Disclaimer
 
-This project is created for educational and analytical purposes using publicly available data. All analysis and dashboards were independently designed.
+This project is created for educational and analytical purposes using publicly available data. All analysis and dashboards were independently designed and implemented.

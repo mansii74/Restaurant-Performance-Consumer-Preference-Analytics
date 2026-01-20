@@ -79,16 +79,62 @@ The ER diagram below illustrates the relationships between consumers, restaurant
 
 ## Data Cleaning
 
-* Imported datasets using folder-based ingestion
-* Expanded and transformed files in Power BI
-* Removed duplicates and handled missing values
-* Standardized categorical values
-* Validated relationships between tables
+### Steps to Import Data as a Folder
+
+* Get Data → More → All → Folder → Connect
+* Select the folder path containing the dataset and click **OK**
+* Click **Transform Data** to open Power Query
+* Duplicate files and expand content using the **Binary** option
+* Repeat the process for all datasets and validate relationships
 
 ### Calculated Fields
 
-* Age Groups (Children, Young Adults, Adults, Middle-aged, Seniors)
-* Food, Service, and Overall Rating Categories
+**Age Group**
+
+```DAX
+AgeGroup = 
+SWITCH(
+    TRUE(),
+    consumers[Age] <= 18, "Children and Adolescents",
+    consumers[Age] <= 30, "Young Adults",
+    consumers[Age] <= 45, "Adults",
+    consumers[Age] <= 60, "Middle-aged Adults",
+    "Seniors"
+)
+```
+
+**Service Rating Category**
+
+```DAX
+Service_Rating_Category = SWITCH(
+    TRUE(),
+    ratings[Service_Rating] = 0, "Unsatisfactory",
+    ratings[Service_Rating] = 1, "Satisfactory",
+    "Highly Satisfactory"
+)
+```
+
+**Overall Rating Category**
+
+```DAX
+Overall_Rating_Category = SWITCH(
+    TRUE(),
+    ratings[Overall_Rating] = 0, "Unsatisfactory",
+    ratings[Overall_Rating] = 1, "Satisfactory",
+    "Highly Satisfactory"
+)
+```
+
+**Food Rating Category**
+
+```DAX
+Food_Rating_Category = SWITCH(
+    TRUE(),
+    ratings[Food_Rating] = 0, "Unsatisfactory",
+    ratings[Food_Rating] = 1, "Satisfactory",
+    "Highly Satisfactory"
+)
+```
 
 ---
 
